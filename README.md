@@ -1,6 +1,5 @@
+1) Where would you fit your automated tests in your Recipe project development pipeline? Select one of the following and explain why.\
+   - Choice 1: Within a Github action that runs whenever code is pushed. Choice 3 is wrong because running after all development is completed is too late, there could be smaller issues that are more difficult to test with some version of a full development done. It is better to test in sections so it doesn't make sense to do it at the end of development. It makes sense to automate tests when code is pushed rather than locally so that we can make sure that what works locally works also with the updated code. The goal of automated tests are to make sure that any changes that are committed don't break the existing code. Additionally, it is possible for code to work locally, but not on the Github because of possibly other changes or browser issues, so it is better to test the code at the last step, which is when the code is pushed and ready to be merged.
 
-
-
-
-
-
+2. Would you use an end to end test to check if a function is returning the correct output? (yes/no)
+  - No, as defined, "End-to-end testing is a way for developers to automate test cases that involve emulating user actions from start to finish (end to end)." Checking if a function is returning the corect output does not emulate user actions from start to finish and can be tested locally because it is a very small individual component.
